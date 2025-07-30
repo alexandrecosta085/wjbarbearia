@@ -1,0 +1,815 @@
+/* ==============================
+   RESET E VARIÁVEIS
+============================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  /* Backgrounds */
+  --bg-color-primary: #f2f2f2;
+  --bg-color-primary-opacity: #f2f2f2e6;
+  --bg-color-secondary: #181616;
+  --bg-color-tertiary: #6a041a;
+  --bg-color-tertiary-opacity: #6a041ae6;
+  --bg-color-quaternary: #e9e9e9;
+
+  /* Colors */
+  --text-color-primary: #0f0f0f;
+  --text-color-secondary: #f2f2f2;
+  --text-color-tertiary: #6a041a;
+
+  /* Hovers */
+  --bg-hover-primary: #3b020d;
+  --text-hover-primary: #3b020d;
+  --text-hover-secondary: #f2f2f2;
+}
+
+/* ==============================
+   GERAL
+============================== */
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: var(--bg-color-primary);
+  background-image: url("/img/banner.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ==============================
+   NAVEGAÇÃO (MENU FIXO)
+============================== */
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background-color: var(--bg-color-tertiary-opacity);
+  z-index: 1000;
+}
+
+.nav-container .logo-container {
+  height: 100%;
+  padding-left: 100px;
+}
+
+.nav-container .logo-container img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.nav-container .menu-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-container .menu-container .nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-right: 100px;
+}
+
+.nav-container .menu-container .nav-menu li {
+  list-style-type: none;
+}
+
+.nav-container .menu-container .nav-menu a {
+  color: var(--text-color-tertiary);
+  background-color: var(--bg-color-primary);
+  padding: 2px 10px;
+  border-radius: 1rem;
+  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
+  font-weight: 800;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-container .menu-container .nav-menu a:hover {
+  color: var(--text-hover-secondary);
+  background-color: var(--bg-color-tertiary);
+}
+
+/* ==============================
+   TÍTULOS E TEXTOS GERAIS
+============================== */
+
+.service .service-title,
+.team .team-title,
+.gallery .gallery-title,
+.testimonials .testimonials-title,
+.location .location-title {
+  color: var(--bg-color-tertiary);
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 800;
+  padding-bottom: 3rem;
+}
+
+.service-title p,
+.team-title p,
+.gallery-title p,
+.testimonials .testimonials-title p,
+.location .location-title p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+}
+
+/* ==============================
+   HOME (SEÇÃO INICIAL)
+============================== */
+
+.home {
+  background-color: var(--bg-color-primary-opacity);
+  padding: 300px 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home .text-home h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 800;
+  color: var(--bg-color-tertiary);
+}
+
+.home .text-home p {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  font-weight: 400;
+  color: var(--bg-color-tertiary);
+}
+
+.home .content-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.home .content-home a {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 800;
+  color: var(--bg-color-tertiary);
+  padding: 10px 20px;
+  border-radius: 0.9rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.home .content-home a:hover {
+  color: var(--text-hover-secondary);
+  background-color: var(--bg-color-tertiary);
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.home .content-home .banner {
+  height: 150px;
+  width: 800px;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #ffffffd9;
+}
+
+.home .content-home .banner p {
+  margin-top: 1.5rem;
+  font-size: clamp(0.8rem, 1.4vw, 1.1rem);
+  font-weight: 400;
+  text-align: center;
+  color: var(--text-color-tertiary);
+}
+
+/* ==============================
+   SOBRE
+============================== */
+
+.about {
+  background-color: var(--bg-color-primary-opacity);
+  padding: 150px 0 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.about .about-title {
+  width: 40%;
+  padding-left: 2rem;
+  color: var(--bg-color-tertiary);
+}
+
+.about .about-title p {
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+  text-align: justify;
+  color: var(--text-color-tertiary);
+}
+
+.about .info {
+  width: 50%;
+}
+
+.about .info .info-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.about .info .info-text .info-title {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .info .info-text .info-title h3 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 800;
+  color: var(--bg-color-tertiary);
+  margin-bottom: 1rem;
+}
+
+.about .info .info-text .info-title p {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 400;
+  color: var(--text-color-tertiary);
+}
+
+.about .info .info-text .info-icon i {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  text-align: start;
+  color: var(--text-color-tertiary);
+}
+
+.about .info .info-text p {
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+  font-weight: 400;
+  color: var(--text-color-tertiary);
+}
+
+.about .info .info-text h3 {
+  color: var(--bg-color-tertiary);
+}
+
+/* ==============================
+   SERVIÇOS / PREÇOS
+============================== */
+
+.service {
+  background-color: var(--bg-color-primary-opacity);
+  padding: 150px 0 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ==============================
+   CARDS DE PREÇOS
+============================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  color: var(--text-color-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.card h3,
+.card span,
+.card p {
+  color: var(--bg-color-tertiary);
+}
+
+.card h3 {
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  margin-bottom: 3rem;
+}
+
+.card span {
+  font-weight: bold;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  margin-bottom: 1rem;
+}
+
+.card a {
+  display: block;
+  margin-top: 4rem;
+  text-decoration: none;
+  background: var(--bg-color-tertiary);
+  color: var(--text-color-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.card a:hover {
+  color: #fff;
+  background: var(--text-hover-primary);
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ==============================
+   EQUIPE
+============================== */
+
+.team {
+  background-color: var(--bg-color-primary-opacity);
+  padding: 150px 0 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+}
+
+.team-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.team-card {
+  height: 400px;
+  width: 15%;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: var(--text-color-tertiary);
+  transition: all 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.team-cards .team-card i {
+  font-size: clamp(5rem, 10vw, 9rem);
+  margin-bottom: 1rem;
+}
+
+.team-cards .team-card p {
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+  margin-top: 2rem;
+  width: 100%;
+  text-align: start;
+}
+
+/* ==============================
+   GALERIA
+============================== */
+
+.gallery {
+  background-color: var(--bg-color-primary-opacity);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 4rem;
+  padding: 20px 50px 35px;
+}
+
+.gallery-images img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/*
+==============================
+   FAIXA HORIZONTAL / STRIP
+==============================
+*/
+
+.strip {
+  width: 100%;
+  height: auto;
+  background-color: var(--bg-color-tertiary-opacity);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.strip .strip-text {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 800;
+}
+
+.strip .strip-text a {
+  display: flex;
+  color: var(--bg-color-primary);
+  padding: 10px 20px;
+  border-radius: 0.9rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.strip .strip-text a:hover {
+  transform: translateY(-5px);
+  color: var(--text-color-tertiary);
+  background-color: var(--bg-color-primary);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.strip .strip-icons {
+  display: flex;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+
+.strip .strip-icons i {
+  font-size: clamp(2.5rem, 5vw, 3rem);
+  color: var(--bg-color-primary);
+  transition: all 0.5s ease-in-out;
+}
+
+.strip .strip-icons i:hover {
+  transform: translateY(-5px);
+}
+
+/* 
+==============================
+   COMENTÁRIOS (TESTEMUNHOS)
+==============================
+*/
+
+.testimonials {
+  background-color: var(--bg-color-primary-opacity);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.testimonials-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.testimonials-card {
+  background-color: var(--bg-color-primary-opacity);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.testimonials-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonials-card i.fa-user-circle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.testimonials-card h4 {
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: var(--bg-color-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+.testimonials-card .star {
+  color: gold;
+  margin-bottom: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.testimonials-card p {
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  color: var(--bg-color-tertiary);
+  line-height: 1.4;
+}
+
+/* ==============================
+   LOCALIZAÇÃO
+============================== */
+
+.location {
+  background-color: var(--bg-color-primary-opacity);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.map {
+  width: 100%;
+  height: 450px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 80%;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 
+==========================
+         Rodapé
+========================== 
+*/
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 20px 20px;
+  background-color: var(--bg-color-tertiary);
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 10px 0px;
+  color: var(--bg-color-primary);
+}
+
+footer a {
+  display: inline-flex;
+  color: var(--bg-color-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+footer a:hover {
+  color: var(--text-hover-secondary);
+  transform: translateY(-5px);
+}
+
+footer i {
+  margin-right: 8px;
+  font-size: 1.5rem;
+}
+
+footer p .separator {
+  margin: 0 8px;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 5px 0;
+  }
+
+  footer a {
+    font-size: 1rem;
+  }
+
+  footer i {
+    font-size: 1.2rem;
+  }
+
+  footer p .separator {
+    display: none;
+  }
+}
+
+/* Media Queries para responsividade */
+
+/* Tablets e celulares grandes */
+@media (max-width: 768px) {
+  /* Nav */
+  .nav-container {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-container .logo-container img {
+    width: 60%;
+    padding-top: 20px;
+  }
+
+  .nav-container .menu-container .nav-menu {
+    gap: 0.5rem;
+    padding-left: 15px;
+    padding-bottom: 40px;
+  }
+
+  .nav-container .menu-container .nav-menu a {
+    padding: 4px 8px;
+  }
+
+  /* Seções com padding reduzido */
+  .home {
+    padding: 180px 20px 80px;
+  }
+
+  .about,
+  .service,
+  .team,
+  .gallery,
+  .strip,
+  .testimonials,
+  .location {
+    padding: 110px 20px 80px;
+  }
+
+  /* Ajustes no texto e títulos */
+  h2 {
+    padding-bottom: 1.5rem;
+  }
+
+  /* Cards e grids */
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .team-cards {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .team-card {
+    width: 200px;
+    height: auto;
+  }
+
+  /* Ajuste no about */
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about .about-title,
+  .about .info {
+    width: 100%;
+    padding-right: 20px;
+  }
+
+  /* Gallery grid menor */
+  .gallery-images {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 10px 20px 30px;
+  }
+
+  /* Ajusta banner dentro da home */
+  .home .content-home .banner {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Celulares pequenos */
+  @media (max-width: 480px) {
+    .nav-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .nav-container .logo-container {
+      padding-left: 20px;
+    }
+
+    .nav-container .menu-container .nav-menu {
+      gap: 0.7rem;
+      padding-right: 20px;
+    }
+
+    .nav-container .menu-container .nav-menu a {
+      padding: 2px 6px;
+    }
+
+    /* Seções com padding ainda menor */
+    .home {
+      padding: 140px 10px 60px;
+    }
+
+    .about,
+    .service,
+    .team,
+    .gallery,
+    .testimonials,
+    .location {
+      padding: 100px 10px 50px;
+    }
+
+    h2 {
+      font-size: clamp(1rem, 5vw, 1.4rem);
+      padding-bottom: 1rem;
+    }
+
+    /* Cards em coluna */
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+
+    .team-cards {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+
+    .team-card {
+      width: 250px;
+      height: auto;
+    }
+
+    /* Gallery uma coluna */
+    .gallery-images {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 5px 10px 20px;
+    }
+
+    /* Banner full width */
+    .home .content-home .banner {
+      width: 100%;
+      height: auto;
+      padding: 0.5rem;
+    }
+  }
+}
