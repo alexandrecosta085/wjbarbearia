@@ -710,17 +710,6 @@ footer p .separator {
     padding: 1rem;
   }
 
-  .team-cards {
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-
-  .team-card {
-    width: 250px;
-    height: auto;
-  }
-
   /* Ajuste no about */
 
   .about {
@@ -793,17 +782,6 @@ footer p .separator {
       grid-template-columns: 1fr;
       gap: 1rem;
       padding: 0.5rem;
-    }
-
-    .team-cards {
-      flex-direction: column;
-      gap: 1rem;
-      padding: 0.5rem;
-    }
-
-    .team-card {
-      width: 250px;
-      height: auto;
     }
 
     /* Gallery uma coluna */
