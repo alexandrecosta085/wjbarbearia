@@ -487,7 +487,6 @@ h2 {
 .strip .strip-icons {
   display: flex;
   gap: 2rem;
-  margin-left: 2rem;
 }
 
 .strip .strip-icons i {
