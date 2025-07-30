@@ -385,10 +385,14 @@ h2 {
 }
 
 .team-card {
-  height: 400px;
-  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+  width: 25%;
   background-color: #fff;
-  padding: 1.5rem;
+  padding: 3rem 3rem 1rem;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: var(--text-color-tertiary);
@@ -401,13 +405,13 @@ h2 {
 }
 
 .team-cards .team-card i {
-  font-size: clamp(5rem, 10vw, 9rem);
-  margin-bottom: 1rem;
+  font-size: clamp(5rem, 10vw, 10rem);
+  margin-bottom: 2rem;
 }
 
 .team-cards .team-card p {
   font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 100%;
   text-align: start;
 }
@@ -715,7 +719,7 @@ footer p .separator {
   }
 
   .team-card {
-    width: 200px;
+    width: 250px;
     height: auto;
   }
 
