@@ -376,27 +376,20 @@ h2 {
 }
 
 .team-cards {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
   padding: 2rem;
-  justify-items: center;
 }
 
 .team-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 550px;
-  width: 25%;
-  background-color: #fff;
-  padding: 3rem 3rem 1rem;
+  background-color: var(--bg-color-primary-opacity);
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: var(--text-color-tertiary);
-  transition: all 0.3s ease-in-out;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
 }
 
 .team-card:hover {
@@ -406,14 +399,19 @@ h2 {
 
 .team-cards .team-card i {
   font-size: clamp(5rem, 10vw, 10rem);
+  color: #aaa;
   margin-bottom: 2rem;
 }
 
+.team-cards .team-card p,
+.team-cards .team-card h3 {
+  color: var(--bg-color-tertiary);
+}
+
 .team-cards .team-card p {
-  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
-  margin-top: 3rem;
-  width: 100%;
-  text-align: start;
+  margin-top: 1rem;
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  line-height: 1.4;
 }
 
 /* ==============================
