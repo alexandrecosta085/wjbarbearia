@@ -732,8 +732,8 @@ footer p .separator {
   }
 
   /* Mapa menor */
-    .map {
-      height: 50%;
+  .map {
+    height: 50%;
   }
 
   /* Celulares pequenos */
@@ -799,5 +799,5 @@ footer p .separator {
       height: auto;
       padding: 0.5rem;
     }
-
+  }
 }
