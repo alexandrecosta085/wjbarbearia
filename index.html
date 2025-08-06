@@ -28,25 +28,24 @@
   </head>
   <body>
     <header>
-      <nav class="nav-container">
-        <div class="logo-container">
-          <a href="/">
-            <img
-              src="/img/WJ BARBEARIA.png"
-              alt="Logo da WJ Barbearia"
-              title="Logo da WJ Barbearia"
-            />
-          </a>
-        </div>
-        <div class="menu-container">
-          <ul class="nav-menu">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#service">Serviços</a></li>
-            <li><a href="#team">Equipe</a></li>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
-        </div>
+      <div class="logo-container">
+        <a href="/">
+          <span>WJ BARBEARIA</span>
+        </a>
+      </div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-container" id="nav">
+        <ul class="nav-menu">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#service">Serviços</a></li>
+          <li><a href="#team">Equipe</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
       </nav>
     </header>
     <main>
@@ -57,13 +56,21 @@
         </div>
 
         <div class="content-home">
-          <a href="#" target="_blank">FAÇA SEU AGENDAMENTO</a>
+          <a href="#" target="_blank">
+            <i class="fa-solid fa-calendar-check"></i>
+
+            FAÇA SEU AGENDAMENTO
+
+            <i class="fa-solid fa-calendar-check"></i
+          ></a>
           <div class="banner">
             <p>Tel: (85) 98888 - 8888</p>
             <p>Av. Dionísio Leonel Alencar, 2372 - Jangurussu, Fortaleza-CE</p>
           </div>
         </div>
       </section>
+
+      <hr />
 
       <section id="about" class="about">
         <div class="about-title">
@@ -109,6 +116,9 @@
           </div>
         </div>
       </section>
+
+      <hr />
+
       <section id="service" class="service">
         <div class="service-title">
           <h2>Tabela de Preços</h2>
@@ -167,6 +177,8 @@
         </div>
       </section>
 
+      <hr />
+
       <section id="team" class="team">
         <div class="team-title">
           <h2>Nossa Equipe</h2>
@@ -197,6 +209,8 @@
           </div>
         </div>
       </section>
+
+      <hr />
 
       <section class="gallery">
         <div class="gallery-title">
@@ -231,7 +245,13 @@
 
       <section class="strip" id="contact">
         <div class="strip-text">
-          <a href="/" target="_blank">FAÇA SEU AGENDAMENTO</a>
+          <a href="/" target="_blank">
+            <i class="fa-solid fa-calendar-check"></i>
+
+            FAÇA SEU AGENDAMENTO
+
+            <i class="fa-solid fa-calendar-check"></i>
+          </a>
         </div>
 
         <div class="strip-icons">
@@ -312,10 +332,12 @@
         </div>
       </section>
 
+      <hr />
+
       <section class="location">
         <div class="location-title">
           <h2>Nossa localização</h2>
-          <p>Gostou nos nosso serviços ? venha nos conhecer</p>
+          <p>Gostou dos nosso serviços? Venha nos conhecer</p>
         </div>
         <div class="map">
           <iframe
@@ -360,5 +382,6 @@
 
     <!-- Fancybox JS -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
